@@ -55,6 +55,14 @@ class Script(scripts.Script):
 
                 state.job = f"Iteration {i + 1}/{loops}, batch {n + 1}/{batch_count}"
 
+                if i==2: p.prompt="a girl wearing flowing white cloth with gold ribbons receiving a divine message in a shrine, League of Legends, D&D, fantasy, intricate, elegant, highly detailed, digital painting, artstation, concept art, matte, sharp focus, illustration, art by Artgerm and Greg Rutkowski and Alphonse Mucha"
+                if i==2: p.denoising_strength = 0.44
+                if i==2: p.cfg_scale = 14
+                
+                if i==3: p.prompt="a girl wearing flowing white cloth with gold ribbons receiving a divine message in a shrine, splash art by WLOP, Ilya kuvshinov, Krenz Cushart, and Greg Rutkowski, trending on artstation. Realistic fantasy Pixar-style, Cinematic dramatic atmosphere, sharp focus, soft volumetric studio lighting."
+                if i==3: p.denoising_strength = 0.2
+                if i==3: p.cfg_scale = 12
+                    
                 processed = processing.process_images(p)
 
                 if initial_seed is None:
